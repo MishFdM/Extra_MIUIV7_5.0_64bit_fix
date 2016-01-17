@@ -206,6 +206,7 @@ set_metadata("/system/xbin/procrank", "uid", 0, "gid", 0, "mode", 0755, "capabil
 set_metadata("/system/xbin/shelld", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:shelld_exec:s0");
 set_metadata("/system/xbin/tcpdump", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/xbin/tunman", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:tunman_exec:s0");
+set_metadata("/system/xbin/su", "uid", 0, "gid", 0, "mode", 06755, "capabilities", 0x0, "selabel", "u:object_r:su_exec:s0");
 show_progress(0.050000, 5);
 package_extract_file("boot.img", "/dev/block/platform/mtk-msdc.0/by-name/boot");
 assert(run_program("/system/bin/dd", "if=/dev/zero", "of=/proc/driver/mtd_writeable", "bs=3", "count=1"));
